@@ -12,22 +12,8 @@ int main(){
     
     //Display prompt
     printf("> ");
-
-    //Read user input
-    //    int i = 0;
-    //  char c;
-
-    //  while ((c = getchar()) != '\n' && i < MAX_INPUT_LENGTH - 1) {
-    //  if (space_char(c)) {
-    //	if (i > 0 && !space_char(input[i-1])){
-    //	  input[i++] = c;
-    //	}
-    //  } else {
-    //	input[i++] = c;
-    //  }
-    //  }
-    //  input[i] = '\0';
     
+    //Read user input
     fgets(str, sizeof(str), stdin);
     
     //Echo input
@@ -38,7 +24,6 @@ int main(){
     add_history(history, str);
     
     char **tokens = tokenize(str);
-
     for (int i = 0; tokens[i] != NULL; i++) {
       printf("Tokens: %s", tokens[i]);
     }
